@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grafico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <h1 style="color: rgb(0, 0, rgb(255, 255, 0));">Grafico</h1>
+
+    <div>
+        <canvas id="myChart" style="position: relative; height:40vh; width:80vw"></canvas>
+      </div>
+
+
+      <!-- Script com dados do grafico -->
+      <script>
+        const labels = [
+          'Janeiro',
+          'Fevereiro',
+          'Março',
+          'Abril',
+          'Maio',
+          '',
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'Horario',
+            backgroundColor: 'rgb(255, 255, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [10, 5, 2, 20, 30, 45],
+          }, 
+
+          {
+            label: 'Temperatura',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [18, 20, 23, 27, 24, 22],
+          }, 
+
+          {
+            label: 'Umidade',
+            backgroundColor: 'rgb(0, 0, 255)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [82, 88, 87, 93, 89, 90],
+          } 
+        ]
+        };
+      
+        const config = {
+          type: 'bar',
+          data: data,
+          options: {}
+        };
+      </script>
+      <!-- Script com dados do grafico -->
+
+
+      <script>
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+      </script>
+       
+</body>
+</html>
